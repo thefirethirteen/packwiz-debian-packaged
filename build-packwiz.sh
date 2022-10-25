@@ -1,9 +1,15 @@
 #!/bin/bash
 
+# Get packwiz from github
+
 git clone https://github.com/packwiz/packwiz.git
+
+# Build packwiz
 
 cd ./packwiz/
 go build -o packwiz
+
+# Cleanup and move binary file to the starting directory
 
 mv ./packwiz ../packwiz-bin
 
