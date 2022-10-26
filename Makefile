@@ -13,18 +13,18 @@ prefix = /usr/local
 all: packwiz
 
 packwiz: packwiz/main.go
-        go build -o packwiz
+	go build -o packwiz
 
 install: packwiz
-        install -D src/hello \
-                $(DESTDIR)$(prefix)/bin/packwiz
+	install -D src/hello \
+		$(DESTDIR)$(prefix)/bin/packwiz
 
 clean:
-        -rm -f packwiz/packwiz
+	-rm -f packwiz/packwiz
 
 distclean: clean
 
 uninstall:
-        -rm -f $(DESTDIR)$(prefix)/bin/packwiz
+	-rm -f $(DESTDIR)$(prefix)/bin/packwiz
 
 .PHONY: all install clean distclean uninstall
