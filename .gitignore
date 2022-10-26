@@ -4,3 +4,7 @@
 /packwiz-bin
 /packwiz
 /package.bash-completion
+
+# macOS
+
+.DS_Store
