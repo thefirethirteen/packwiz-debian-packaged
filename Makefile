@@ -16,7 +16,7 @@ packwiz: packwiz/main.go
 	go build -o packwiz
 
 install: packwiz
-	install -D src/hello \
+	install -D packwiz/packwiz \
 		$(DESTDIR)$(prefix)/bin/packwiz
 
 clean:
