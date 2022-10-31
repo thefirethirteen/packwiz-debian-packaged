@@ -10,9 +10,7 @@
 
 prefix = /usr/local
 
-all: packwiz
-
-packwiz: packwiz/main.go
+packwiz/packwiz: packwiz/main.go
 	go build -o packwiz
 
 install: packwiz
