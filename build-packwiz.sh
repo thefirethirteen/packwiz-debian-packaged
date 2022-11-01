@@ -6,7 +6,7 @@ git clone https://github.com/packwiz/packwiz.git
 
 # Copy makefile to packwiz source
 
-cp ./Makefile ./packwiz/Makefile
+cp ./source.mak ./packwiz/Makefile
 
 # Build packwiz
 
