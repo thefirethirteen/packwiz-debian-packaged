@@ -5,6 +5,12 @@
 /packwiz
 /package.bash-completion
 
+# Makefile
+
+/packwiz-source/
+/packwiz
+/package.bash-completion
+
 # macOS
 
 .DS_Store
