@@ -4,10 +4,14 @@
 
 git clone https://github.com/packwiz/packwiz.git
 
+# Copy makefile to packwiz source
+
+cp ./Makefile ./packwiz/Makefile
+
 # Build packwiz
 
 cd ./packwiz/
-go build -o packwiz
+make all
 
 # Cleanup and move binary file to the starting directory
 
