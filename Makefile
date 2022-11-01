@@ -10,19 +10,25 @@
 
 prefix = /usr/local
 
-packwiz/packwiz: packwiz/main.go
-	go build -o packwiz
+all: packwiz/packwiz
+
+packwiz/packwiz: packwiz packwiz/main.go
+	-cd packwiz/
+	-go build -o packwiz
+
+packwiz:
+	@git clone https://github.com/packwiz/packwiz
 
 install: packwiz
 	install -D packwiz/packwiz \
 		$(DESTDIR)$(prefix)/bin/packwiz
 
+uninstall:
+	-rm -f $(DESTDIR)$(prefix)/bin/packwiz
+
 clean:
 	-rm -f packwiz/packwiz
 
 distclean: clean
-
-uninstall:
-	-rm -f $(DESTDIR)$(prefix)/bin/packwiz
 
 .PHONY: all install clean distclean uninstall
