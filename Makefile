@@ -12,7 +12,7 @@ all: packwiz package.bash-completion autoclean
 
 packwiz: ./packwiz-source/
 	cd ./packwiz-source/ && go build -o ./packwiz
-	mv ./packwiz-source/packwiz ../packwiz
+	mv ./packwiz-source/packwiz ./packwiz
 
 ./packwiz-source/:
 	git clone https://github.com/packwiz/packwiz ./packwiz-source/
