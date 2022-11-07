@@ -16,11 +16,11 @@ packwiz:
 	go build -o ./packwiz
 
 install: packwiz
-        install -D ./packwiz \
-                $(DESTDIR)$(prefix)/bin/packwiz
+	install -D ./packwiz \
+		$(DESTDIR)$(prefix)/bin/packwiz
 
 clean:
 	rm -f ./packwiz
 
 uninstall:
-        rm -f $(DESTDIR)$(prefix)/bin/packwiz
+	rm -f $(DESTDIR)$(prefix)/bin/packwiz
